@@ -1,6 +1,8 @@
 import React from "react";
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import { MoviesService } from "../services/MoviesService";
+
 
 export const MoviesList = () => {
   const [movies, setMovies] = useState({data: {results: [] }});
@@ -19,7 +21,7 @@ export const MoviesList = () => {
     <>
     <ul>
       {movies.data.results.map(movie => (
-        <li><a href={movie.id}>{movie.title}</a></li>
+        <li><Link to={`${movie.id}`} params={{id: movie.id}}>{movie.title}</Link></li>
       ))}
      </ul> 
     </>
