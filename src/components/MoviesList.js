@@ -21,7 +21,7 @@ export const MoviesList = () => {
     <>
     <ul>
       {movies.data.results.map(movie => (
-        <li><Link to={`${movie.id}`} params={{id: movie.id}}>{movie.title}</Link></li>
+        <li><Link to={`movies/${movie.id}`} params={{id: movie.id}}>{movie.title}</Link></li>
       ))}
      </ul> 
     </>
