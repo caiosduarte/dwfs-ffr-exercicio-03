@@ -15,7 +15,7 @@ export const MoviesList = () => {
 
   useEffect(() => {
     requestMovies();
-  });
+  }, []);
   
   return (
     <>
