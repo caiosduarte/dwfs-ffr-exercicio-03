@@ -21,7 +21,7 @@ export const MoviesList = () => {
     <>
     <ul>
       {movies.data.results.map(movie => (
-        <MovieItem id={movie.id} title={movie.title} popularity={movie.popularity}/>
+        <MovieItem key={movie.id} id={movie.id} title={movie.title} popularity={movie.popularity}/>
       ))}
      </ul> 
     </>
